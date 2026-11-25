@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adam Amaziane — Développeur Full Stack | Portfolio</title>
+  <meta name="description" content="Portfolio d'Adam Amaziane — futur ingénieur full stack (MIAGE, EMSI Tanger). React, Laravel, Spring, DevOps, Data. À la recherche d'un stage de fin d'études (PFE)." />
+  <meta property="og:title" content="Adam Amaziane — Développeur Full Stack" />
+  <meta property="og:description" content="Futur ingénieur full stack (MIAGE, EMSI Tanger) — React, Laravel, Spring, DevOps, Data." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://adam-amaziane.github.io/" />
+  <meta name="theme-color" content="#05070d" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#about">Aller au contenu</a>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-name">ADAM<span>.</span>AMAZIANE</div>
+  </div>
+
+  <header class="site-nav" id="site-nav">
+    <a class="brand" href="#hero">
+      <span class="brand-badge">AA</span>
+      <span class="brand-name">adam<span class="grad">.amaziane</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#about" data-i18n="nav.about">À propos</a>
+      <a href="#skills" data-i18n="nav.skills">Compétences</a>
+      <a href="#projects" data-i18n="nav.projects">Projets</a>
+      <a href="#journey" data-i18n="nav.journey">Parcours</a>
+      <a href="#certifications" data-i18n="nav.certs">Certifications</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switch" role="group" aria-label="Langue / Language">
+        <button type="button" id="lang-fr" class="lang-btn active" aria-pressed="true">FR</button>
+        <button type="button" id="lang-en" class="lang-btn" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" id="theme-toggle" class="icon-btn" aria-label="Changer de thème">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button type="button" id="burger" class="icon-btn burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Menu mobile">
+      <a href="#about" data-i18n="nav.about">À propos</a>
+      <a href="#skills" data-i18n="nav.skills">Compétences</a>
+      <a href="#projects" data-i18n="nav.projects">Projets</a>
+      <a href="#journey" data-i18n="nav.journey">Parcours</a>
+      <a href="#certifications" data-i18n="nav.certs">Certifications</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="mm-actions">
+      <a class="btn btn-ghost" href="https://github.com/ADAM-AMAZIANE" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/adam-amaziane-850521269/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============================ HERO -->
+    <section id="hero" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-badge reveal">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.badge">Disponible pour un stage de fin d'études (PFE)</span>
+          </p>
+          <p class="hero-greeting mono reveal" data-i18n="hero.greeting">Bonjour, je m'appelle</p>
+          <h1 class="hero-name reveal"><span class="grad">Adam</span> Amaziane</h1>
+          <p class="hero-role reveal" aria-live="polite">
+            <span id="typewriter">Développeur Full Stack</span><span class="caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero-desc reveal" data-i18n="hero.desc"></p>
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="#projects" data-i18n="hero.projects">Voir mes projets</a>
+            <a class="btn btn-ghost" id="btn-cv" href="assets/CV-Adam-Amaziane.pdf" download>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span id="btn-cv-label" data-i18n="hero.cv">Télécharger le CV</span>
+            </a>
+          </div>
+          <div class="hero-stats reveal" id="hero-stats"></div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="terminal">
+            <div class="term-head">
+              <span class="term-dot dot-r"></span><span class="term-dot dot-y"></span><span class="term-dot dot-g"></span>
+              <span class="term-title mono" data-i18n="hero.terminal.title">profil.json</span>
+            </div>
+            <pre class="term-body mono" id="term-body"></pre>
+          </div>
+          <div class="float-chips" id="float-chips"></div>
+        </div>
+      </div>
+
+      <div class="marquee-wrap" aria-hidden="true">
+        <div class="marquee" id="marquee"></div>
+      </div>
+      <a class="scroll-hint" href="#about" aria-label="Défiler vers le bas">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+    </section>
+
+    <!-- ============================ ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-num mono" data-i18n="about.num">01</span>
+          <h2 data-i18n="about.title">À propos</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="reveal" data-i18n="about.p1"></p>
+            <p class="reveal" data-i18n="about.p2"></p>
+            <h3 class="reveal" data-i18n="about.softTitle">Soft skills</h3>
+            <ul class="chips reveal" id="soft-chips"></ul>
+            <h3 class="reveal" data-i18n="about.langsTitle">Langues</h3>
+            <ul class="chips reveal" id="lang-chips"></ul>
+          </div>
+          <div class="about-card reveal">
+            <h3 data-i18n="about.infoTitle">Informations</h3>
+            <ul id="about-info" class="info-list"></ul>
+            <div class="about-card-actions">
+              <a href="https://github.com/ADAM-AMAZIANE" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">GitHub</a>
+              <a href="https://www.linkedin.com/in/adam-amaziane-850521269/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-num mono" data-i18n="skills.num">02</span>
+          <h2 data-i18n="skills.title">Compétences</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+        <p class="sec-sub reveal" data-i18n="skills.sub"></p>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============================ PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-num mono" data-i18n="projects.num">03</span>
+          <h2 data-i18n="projects.title">Projets</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+        <p class="sec-sub reveal" data-i18n="projects.sub"></p>
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============================ JOURNEY -->
+    <section id="journey" class="section alt">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-num mono" data-i18n="journey.num">04</span>
+          <h2 data-i18n="journey.title">Parcours</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+
+        <h3 class="journey-sub reveal" data-i18n="journey.expTitle">Expérience professionnelle</h3>
+        <ol class="timeline" id="timeline"></ol>
+
+        <h3 class="journey-sub reveal" data-i18n="journey.eduTitle">Formation</h3>
+        <div class="edu-grid" id="edu-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============================ CERTIFICATIONS -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-num mono" data-i18n="certs.num">05</span>
+          <h2 data-i18n="certs.title">Certifications</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+        <p class="sec-sub reveal" data-i18n="certs.sub"></p>
+        <div class="certs-grid" id="certs-grid"></div>
+        <div class="linkedin-card reveal">
+          <div class="linkedin-card-text" data-i18n="certs.linkedinText"></div>
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/adam-amaziane-850521269/details/certifications/" target="_blank" rel="noopener noreferrer" data-i18n="certs.linkedinCta">Voir mes certifications sur LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-num mono" data-i18n="contact.num">06</span>
+          <h2 data-i18n="contact.title">Contact</h2>
+          <span class="sec-line" aria-hidden="true"></span>
+        </div>
+        <p class="sec-sub reveal" data-i18n="contact.sub"></p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3 class="reveal" data-i18n="contact.infoTitle">Coordonnées</h3>
+            <ul id="contact-info" class="contact-list"></ul>
+          </div>
+          <form id="contact-form" class="contact-form reveal">
+            <h3 data-i18n="contact.formTitle">Envoyez-moi un message</h3>
+            <div class="field-row">
+              <div class="field">
+                <label for="cf-name" data-i18n="contact.name">Votre nom</label>
+                <input id="cf-name" name="name" type="text" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="cf-email" data-i18n="contact.email">Votre e-mail</label>
+                <input id="cf-email" name="email" type="email" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="cf-message" data-i18n="contact.message">Votre message</label>
+              <textarea id="cf-message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="contact.send">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-badge">AA</span>
+        <div>
+          <p class="footer-name">Adam Amaziane</p>
+          <p class="footer-made mono" data-i18n="footer.made">Conçu et développé par Adam Amaziane</p>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="https://github.com/ADAM-AMAZIANE" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/adam-amaziane-850521269/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="mailto:adam.amaziane@emsi-edu.ma" aria-label="E-mail">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+      <div class="footer-right">
+        <p class="mono">© <span id="footer-year">2026</span> Adam Amaziane — <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+        <a href="#hero" class="back-top" data-i18n="footer.top">Retour en haut</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
